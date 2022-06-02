@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <UseWindowsForms>true</UseWindowsForms>
+        <TargetFramework>net472</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
+      <Compile Update="src\Forms\Bearbeiten - Kopieren.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Main.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\IDAnlegen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\SchichtsystemAnlegen - Kopieren.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\SchichtsystemAnlegen - Kopieren.Designer.cs">
+        <DependentUpon>SchichtsystemAnlegen.Designer.cs</DependentUpon>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\TargetHinzufügen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\ProjektAnlegen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\ProzessAnlegen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\SchichtsystemAnlegen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\SubstratwerkstoffAnlegen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Form\Verwaltung\EigenschaftHinzufügen.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Forms\Analysedaten\Analysedaten.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="src\Forms\Analysedaten\Ergebnisablage.cs">
+        <SubType>Form</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="MySql.Data" Version="8.0.25" />
+      <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.25" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="SSH.NET" Version="2020.0.1" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="src\Form\Verwaltung\SchichtsystemAnlegen - Kopieren.resx">
+        <DependentUpon>SchichtsystemAnlegen.resx</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Properties\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="docs" />
+      <Folder Include="tools" />
+    </ItemGroup>
+
+</Project>
